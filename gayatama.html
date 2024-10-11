@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html lang="id">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>website full layar</title>
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+    />
+    <style>
+      html,
+      body {
+        margin: 0;
+        padding: 0;
+        width: 100%;
+        height: 100%;
+        font-family: "Times New Roman", Times, serif, sans-serif;
+      }
+
+      .welcome {
+        background-color: #00a8ea;
+        color: white;
+        text-align: center;
+        padding: 50px;
+        width: 100%;
+        height: 100vh;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        box-sizing: border-box;
+      }
+
+      .welcome h1 {
+        font-size: 4em;
+        margin: 0;
+        padding: 0;
+      }
+
+      .nav {
+        display: flex;
+        justify-content: center;
+        background-color: #333;
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 1000;
+      }
+
+      .nav a {
+        padding: 14px 20px;
+        text-align: center;
+        text-decoration: none;
+        color: white;
+        display: flex;
+        align-items: center;
+      }
+
+      .nav a i {
+        margin-right: 8px;
+      }
+
+      .nav a:hover {
+        background-color: #ddd;
+        color: black;
+      }
+
+      .content {
+        padding: 20px;
+        text-align: center;
+        margin-top: 60px;
+      }
+
+      .hidden {
+        display: none;
+      }
+
+      .produk-section {
+        display: grid;
+        grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+        gap: 20px;
+        padding: 20px;
+      }
+
+      .produk-item {
+        background-color: #11d7e6;
+        padding: 20px;
+        border-radius: 10px;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        text-align: center;
+        transition: transform 0.3s ease;
+      }
+
+      .produk-item:hover {
+        transform: translateY(-10px);
+      }
+
+      .produk-item img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 5px;
+      }
+
+      .price {
+        font-size: 1.2em;
+        color: #030403;
+        margin: 10px 0;
+      }
+
+      h2,
+      h3,
+      h4 {
+        color: #226844;
+      }
+
+      p {
+        color: #333;
+      }
+
+      button {
+        padding: 10px 20px;
+        background-color: #6082d2;
+        color: white;
+        border: none;
+        cursor: pointer;
+        border-radius: 5px;
+      }
+
+      button:hover {
+        background-color: #5073c2;
+      }
+
+      .footer {
+        margin-top: 40px;
+        padding: 20px;
+        background-color: #333;
+        color: white;
+        text-align: center;
+      }
+
+      form {
+        margin-top: 20px;
+      }
+
+      input[type="text"],
+      textarea {
+        padding: 10px;
+        margin: 10px 0;
+        width: 300px;
+      }
+
+      textarea {
+        height: 100px;
+      }
+
+      input[type="submit"] {
+        padding: 10px 20px;
+        background-color: #6082d2;
+        color: white;
+        border: none;
+        cursor: pointer;
+      }
+
+      input[type="submit"]:hover {
+        background-color: #5073c2;
+      }
+
+      .informasi-kontak {
+        text-align: left;
+        margin: 20px auto;
+        max-width: 600px;
+      }
+    </style>
+  </head>
+  <body>
+    <div class="welcome" id="welcome">
+      <!-- Image Section -->
+      <img width="110%"
+      src=https://images.pexels.com/photos/1126993/pexels-photo-1126993.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=2
+      alt="Profile Picture">
+    </div>
+
+    <div class="nav">
+      <a href="#beranda" onclick="showPage('beranda')"
+        ><i class="fas fa-home"></i> Beranda</a
+      >
+      <a href="#profil" onclick="showPage('profil')"
+        ><i class="fas fa-user"></i> Profil</a
+      >
+      <a href="#produk" onclick="showPage('produk')"
+        ><i class="fas fa-box-open"></i> Produk</a
+      >
+      <a href="#hubungi-kami" onclick="showPage('hubungi-kami')"
+        ><i class="fas fa-envelope"></i> Hubungi Kami</a
+      >
+    </div>
+
+    <div id="beranda" class="content hidden">
+      <h2>selamat datang pelanggan</h2>
+      ⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠
+      <h3>Menawarkan Solusi Terbaik untuk Kebutuhan Anda</h3>
+      <p>
+        Di perusahaan Kanun, kami berkomitmen untuk memberikan layanan dan
+        produk berkualitas tinggi yang memenuhi kebutuhan Anda. Dengan
+        pengalaman lebih dari 10 tahun di industri ini, kami telah membangun
+        reputasi sebagai penyedia terpercaya dan inovatif.
+      </p>
+      <h4>Fitur Utama</h4>
+      =======================================
+      <ul>
+        <p></p>
+        <li>
+          <strong>Layanan Pelanggan 24/7:</strong> Tim kami siap membantu Anda
+          kapan saja.
+        </li>
+        <p></p>
+        <li>
+          <strong>Produk Berkualitas Tinggi:</strong> Setiap produk telah
+          melewati proses pengujian yang ketat.
+        </li>
+        <p></p>
+        <li>
+          <strong>Harga Kompetitif:</strong> Kami memberikan harga terbaik tanpa
+          mengorbankan kualitas.
+        </li>
+        <p></p>
+        <li>
+          <strong>Testimoni Pelanggan:</strong> "Layanan yang luar biasa! Sangat
+          puas." - <em>putri nabilaa</em>
+        </li>
+      </ul>
+      <button onclick="showWelcome()">Kembali ke Beranda</button>
+    </div>
+
+    <div id="profil" class="content hidden">
+      <h2>Tentang Kami</h2>
+      ⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠
+      <p>
+        Kami adalah perusahaan yang bergerak di bidang fashion, berkomitmen
+        untuk memberikan produk pakaian berkualitas tinggi dan mengikuti tren
+        terbaru.
+      </p>
+      <h3>Visi Kami</h3>
+      <p>
+        Menjadi perusahaan fashion terdepan dalam inovasi desain dan
+        keberlanjutan.
+      </p>
+      <h3>Misi Kami</h3>
+      <ul>
+        <li>Menyediakan produk berkualitas tinggi dengan harga terjangkau.</li>
+        <li>Mengutamakan kenyamanan dan kepuasan pelanggan.</li>
+        <li>Menerapkan prinsip keberlanjutan dalam setiap tahap produksi.</li>
+      </ul>
+      <button onclick="showWelcome()">Kembali ke Beranda</button>
+    </div>
+    <div id="produk" class="content hidden">
+      <h2>Produk Kami</h2>
+      ⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠☆⁠
+      <p></p>
+      selamat berbelanjaa (⁠☞ﾟ⁠ヮﾟ⁠)⁠☞
+      <div class="produk-section">
+        <div class="produk-item">
+          <img
+          src=https://i.pinimg.com/474x/ea/d8/83/ead8835d91e4020db1452d164ec1a8d4.jpg
+          alt="Baju Casual"style="width: 130px;">
+          <h3>Baju Casual</h3>
+          <p class="price">Rp 150.000</p>
+          <button onclick="alert('Anda telah membeli Baju Casual!')">
+            Beli Sekarang
+          </button>
+        </div>
+        <div class="produk-item">
+          <img
+          src=https://i.pinimg.com/474x/d6/0f/ff/d60fff00282ff925da0f605e8fe29feb.jpg
+          alt="Jaket Denim"style="width: 140px;">
+          <h3>Jaket Denim</h3>
+          <p class="price">Rp 250.000</p>
+          <button onclick="alert('Anda telah membeli Jaket Denim!')">
+            Beli Sekarang
+          </button>
+        </div>
+        <div class="produk-item">
+          <img
+          src=https://i.pinimg.com/474x/f1/00/65/f1006540dbfbfc0bb633d87a16eae2b3.jpg
+          alt="kemeja-flanel"style="width: 140px;">
+          <h3>Kemeja Flanel</h3>
+          <p class="price">Rp 180.000</p>
+          <button onclick="alert('Anda telah membeli Kemeja Flanel!')">
+            Beli Sekarang
+          </button>
+        </div>
+        <div class="produk-item">
+          <img
+          src=https://i.pinimg.com/474x/54/60/f4/5460f4653123521ea74b065306798e12.jpg
+          alt="Celana Jeans"style="width: 130px;">
+          <h3>Celana Jeans</h3>
+          <p class="price">Rp 220.000</p>
+          <button onclick="alert('Anda telah membeli Celana Jeans!')">
+            Beli Sekarang
+          </button>
+        </div>
+        <div class="produk-item">
+          <img
+          src=https://i.pinimg.com/474x/06/f3/33/06f3339bd0af9b09331f702bb3163335.jpg
+          alt="midi dress"style="width: 140px;">
+          <h3>midi dress</h3>
+          <p class="price">Rp 440.000</p>
+          <button onclick="alert('Anda telah membeli midi dress!')">
+            Beli Sekarang
+          </button>
+        </div>
+        <div class="produk-item">
+          <img
+          src=https://i.pinimg.com/474x/87/10/75/87107537772ab10796e8b8f0178c07e0.jpg
+          alt="blue sweater"style="width: 120px;">
+          <h3>blue sweater</h3>
+          <p class="price">Rp 125.000</p>
+          <button onclick="alert('Anda telah membeli blue sweater!')">
+            Beli Sekarang
+          </button>
+        </div>
+      </div>
+      <button onclick="showWelcome()">Kembali ke Beranda</button>
+    </div>
+
+    <div id="hubungi-kami" class="content hidden">
+      <h2>Hubungi Kami</h2>
+      <form>
+        <label for="nama">Nama Lengkap:</label><br />
+        <input
+          type="text"
+          id="nama"
+          name="nama"
+          placeholder="Masukkan Nama Anda"
+          required
+        /><br />
+        <label for="email">Email:</label><br />
+        <input
+          type="email"
+          id="email"
+          name="email"
+          placeholder="Masukkan Email Anda"
+          required
+        /><br />
+        <label for="pesan">Pesan:</label><br />
+        <textarea
+          id="pesan"
+          name="pesan"
+          placeholder="Tulis pesan Anda di sini"
+          required
+        ></textarea
+        ><br />
+        <input type="submit" value="Kirim" />
+      </form>
+      <div class="informasi-kontak">
+        <h3>Informasi Kontak</h3>
+        <p><strong>Alamat:</strong> Jl. Fashion No. 123, sidoarjo taman</p>
+        <p><strong>Email:</strong>@dressbeauty.com</p>
+        <p><strong>Telepon:</strong> +62 21 12345678</p>
+        <p><strong>Jam Operasional:</strong> Senin - ju'mat, 08:00 - 20:00</p>
+      </div>
+
+      <button onclick="showWelcome()">Kembali ke Beranda</button>
+    </div>
+
+    <div class="footer">
+      <p>&copy; 2024 Proyek kami. Hak Cipta Dilindungi.</p>
+    </div>
+
+    <script>
+      function showPage(page) {
+        const pages = ["beranda", "profil", "produk", "hubungi-kami"];
+        pages.forEach((p) => {
+          document.getElementById(p).classList.add("hidden");
+        });
+        document.getElementById(page).classList.remove("hidden");
+        document.getElementById("welcome").classList.add("hidden");
+      }
+      function showWelcome() {
+        const pages = ["beranda", "profil", "produk", "hubungi-kami"];
+        pages.forEach((p) => {
+          document.getElementById(p).classList.add("hidden");
+        });
+        document.getElementById("welcome").classList.remove("hidden");
+      }
+
+      showWelcome();
+    </script>
+  </body>
+</html>
